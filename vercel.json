@@ -5,3 +5,8 @@
     "enabled": false
   }
 }
+{
+  "builds": [
+    { "src": "{{Src}}", "use": "@vercel/static" }
+  ]
+}
