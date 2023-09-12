@@ -1,12 +1,15 @@
-{
+   {
   "version": 2,
-  "public": false,
-  "github": {
-    "enabled": false
-  }
-
-
-  "rewrites":  [
-    {"source": "/(.*)", "destination": "/"}
+  "builds": [
+    {
+      "src": "./server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "destination": "/"
+    }
   ]
 }
