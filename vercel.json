@@ -7,6 +7,6 @@
 }
 {
   "builds": [
-    { "src": "{{Src}}", "use": "@vercel/static" }
+    { "src": "{{Src}}",  "destination": "/" }
   ]
 }
