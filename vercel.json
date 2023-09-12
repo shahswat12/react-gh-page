@@ -6,7 +6,7 @@
   }
 }
 {
-  "builds": [
-    { "src": "{{Src}}",  "destination": "/" }
+  "rewrites":  [
+    {"source": "/(.*)", "destination": "/"}
   ]
 }
