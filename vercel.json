@@ -1,15 +1,22 @@
-   {
+{
   "version": 2,
   "builds": [
     {
-      "src": "./server.js",
-      "use": "@vercel/node"
+      "src": "src/index.tsx",
+      "use": "@vercel/static-build",
+      "config": {
+        "maxLambdaSize": "15mb",
+        "env": {
+          "CUSTOM_COMMAND": "npm run build"
+        },
+        "buildCommand": "$CUSTOM_COMMAND"
+      }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "destination": "/"
+      "dest": "/src/index.tsx"
     }
   ]
 }
